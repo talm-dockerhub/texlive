@@ -1,3 +1,5 @@
-FROM phusion/baseimage:0.11
+FROM ubuntu:focal
 
-RUN apt update && apt install -y texlive-full 
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt update 
+RUN apt install -y texlive-full 
